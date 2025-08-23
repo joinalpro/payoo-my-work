@@ -20,32 +20,46 @@
           <div class="w-[360px] flex justify-center">
             <div class="stats shadow">
               <div class="stat">
-                <div class="stat-value">9400</div>
+                <div id="bankBalance" class="stat-value">9400</div>
                 <div class="stat-desc">Available Balance</div>
               </div>
             </div>
           </div>
           <div class="divider"></div>
-          <!-- user action buttion -->
+          <!-- user action button -->
           <div class="flex justify-center">
-            <button class="btn btn-lg mx-2">Add Money</button>
-            <button class="btn btn-lg">Cash Out</button>
+            <button id="btn-show-add-money" class="btn btn-lg mx-2">
+              Add Money
+            </button>
+            <button id="btn-show-cash-out" class="btn btn-lg">Cash Out</button>
           </div>
           <div class="divider"></div>
           <!-- add money form start-->
-          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <div
+            id="add-money-form"
+            class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+          >
             <div class="card-body">
               <fieldset class="fieldset">
                 <label class="label">Amount</label>
-                <input type="text" class="input" placeholder="Amount" />
+                <input
+                  id="input-amount"
+                  type="text"
+                  class="input"
+                  placeholder="Add Amount"
+                />
                 <label class="label">Pin</label>
                 <input
+                  id="input-pin"
                   type="password"
                   class="input"
-                  placeholder="Password"
+                  placeholder="Pin Number"
                   autocomplete="off"
                 />
-                <button class="btn bg-blue-700 text-white mt-4 p-2">
+                <button
+                  id="btn-addMoney"
+                  class="btn bg-blue-700 text-white mt-4 p-2"
+                >
                   Add Money
                 </button>
               </fieldset>
@@ -53,9 +67,46 @@
           </div>
 
           <!-- add money form end -->
+
+          <!-- cash out start -->
+          <div
+            id="cash-out-form"
+            class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+          >
+            <div class="card-body">
+              <fieldset class="fieldset">
+                <label class="label">Amount</label>
+                <input
+                  id="input-cashout-amount"
+                  type="text"
+                  class="input"
+                  placeholder="Cashout Amount"
+                />
+                <label class="label">Pin</label>
+                <input
+                  id="input-cashout-pin"
+                  type="password"
+                  class="input"
+                  placeholder="Pin Number"
+                  autocomplete="off"
+                />
+                <button
+                  id="btn-cash-out"
+                  class="btn bg-blue-700 text-white mt-4 p-2"
+                >
+                  Cash Out
+                </button>
+              </fieldset>
+            </div>
+          </div>
+
+          <!-- cash out end -->
         </div>
       </div>
     </main>
-    <script src="js/home.js"></script>
+    <!-- <script src="js/home.js"></script> -->
+    <script src="js/addMoney.js"></script>
+    <script src="js/cashOut.js"></script>
+    <script src="js/features.js"></script>
   </body>
 </html>
